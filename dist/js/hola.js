@@ -1,0 +1,1 @@
+(o=>{o("Hola que onda "),o("Soy banan")})(console.log);
