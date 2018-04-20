@@ -4,11 +4,11 @@
 # TEAM
 
     <name> -- <role> -- <twitter>
-    < Jonathan MirCha > -- < Front end Architect > -- < @jonmircha >
+    < Carlos Alberto Vera Villegas > -- < Front end Architect > -- < @kikiondo>
 
 # THANKS
 
-    < Jonathan MirCha >
+    < Carlos Vera >
 
 # TECHNOLOGY COLOPHON
 
