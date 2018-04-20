@@ -2332,6 +2332,86 @@
   overflow: visible;
   clip: auto; }
 
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWJ0bbck.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFUZ0bbck.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWZ0bbck.woff2) format("woff2");
+  unicode-range: U+1F00-1FFF; }
+
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVp0bbck.woff2) format("woff2");
+  unicode-range: U+0370-03FF; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWp0bbck.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFW50bbck.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0b.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+.VideoHeader {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif; }
+  .VideoHeader-text {
+    position: absolute;
+    top: 30vh;
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff; }
+    .VideoHeader-text > h2 {
+      font-size: 8vw;
+      margin: 1rem auto; }
+    .VideoHeader-text > h3 {
+      font-size: 4vw; }
+      @media screen and (min-width: 64em) {
+        .VideoHeader-text > h3 {
+          font-size: 2.5vw; } }
+
 /**
 *   @fileoverview
 *     Componente para aplicar un reseteo de estilos básicos al documento, aplica las siguientes reglas:
@@ -2351,7 +2431,7 @@
 */
 html {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px; }
 
 *,
@@ -2362,88 +2442,118 @@ html {
   padding: 0; }
 
 body {
-  overflow-x: hidden; }
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(#0096d9, #171226); }
 
-/**
-*   @fileoverview
-*     Componente para incrustar un video de YouTube en nuestro sitio web cuando la resolución es mayor a 64em (1024px), cuando es menor se agrega un enlace al video
-*     Dependencias: font-awesome
-*
-*   @param {String} id, id del video de YouTube, se define en el archivo pug
-*   @param {String} $video-width, anchura del contenedor del video, se define en el archivo scss
-*
-*   @returns {void} no retorna nada
-*
-*   @author Jonathan MirCha <jonmircha@gmail.com>
-*   @version 1.0.0
-*/
-.Youtube {
-  width: 100%;
-  height: auto;
+a {
+  color: #fff;
+  transition: all -3s ease-out; }
+  a:hover {
+    color: #0096d9;
+    opacity: .75; }
+
+img {
   display: block;
-  margin: auto; }
-  .Youtube-wrapper {
-    position: relative;
-    height: auto; }
-    @media screen and (min-width: 64em) {
-      .Youtube-wrapper {
-        padding-bottom: 56.25%;
-        /* 16:9 */ } }
-  .Youtube iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-  .Youtube a {
+  max-width: 100%;
+  height: auto; }
+
+.hamburger:focus {
+  outline: 0;
+  border: 0; }
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  background: #FFF; }
+
+.u-afterFixed {
+  padding-top: 4rem; }
+
+.Header {
+  position: fixed;
+  z-index: 998;
+  width: 100%;
+  height: 4rem;
+  transition: all .3s ease-out;
+  background-color: rgba(23, 18, 38, 0); }
+  .Header.is-active {
+    background-color: rgba(23, 18, 38, 0.9); }
+  .Header-container {
+    margin: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4rem, auto;
+    grid-template-areas: ". logo hamburger" "panel panel panel"; }
+
+.Logo {
+  z-index: 999;
+  grid-area: logo;
+  justify-self: center; }
+  .Logo-link {
     display: block;
-    margin: 2rem auto;
-    text-align: center;
-    text-decoration: none;
-    font-size: 3.5vw; }
+    width: 4rem;
+    height: 4rem;
+    text-indent: -9999px;
+    background-image: url("./img/marathons-logo.svg");
+    background-size: 3.5rem;
+    background-repeat: no-repeat;
+    background-position: center; }
 
-html {
-  background-color: #3A99D7;
-  background-image: radial-gradient(circle, #FFF, #3A99D7); }
+.Panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow-y: auto;
+  grid-area: panel;
+  background-color: rgba(23, 18, 38, 0.9);
+  transition: transform .3s ease-out;
+  transform: translateX(-100%); }
+  .Panel.is-active {
+    transform: translateX(0); }
+  .Panel-button {
+    z-index: 999;
+    grid-area: hamburger;
+    justify-self: end; }
 
-.App {
-  width: 80vw;
-  max-width: 800px;
-  margin: 10vh auto;
-  display: flex;
-  flex-direction: column;
-  text-align: center; }
-  .App > * {
-    margin: 1rem auto; }
-  .App a {
-    color: #E44D26;
-    transition: all .3s ease-out; }
-    .App a:hover {
-      opacity: .75; }
-  .App picture,
-  .App img {
-    max-width: 100%;
-    height: auto; }
-  .App-title {
-    font-weight: bold;
-    font-size: 3rem; }
-  .App-description {
-    font-size: 1.5rem; }
-  .App-logo {
-    width: 480px; }
-  .App-logos {
+.Menu {
+  margin-top: calc(4rem + 2rem); }
+  .Menu-listItem {
     display: flex;
-    justify-content: center;
-    align-content: space-between; }
-    .App-logos img {
-      padding: 1rem;
-      width: 320px; }
-  .App-video {
-    width: 100%; }
+    flex-direction: column;
+    text-align: center;
+    list-style: none; }
+  .Menu-link {
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #FFF;
+    text-decoration: none;
+    transition: all .3s ease-out; }
 
-.u-download {
-  font-weight: bold;
-  font-size: 4vw; }
-  @media screen and (min-width: 64em) {
-    .u-download {
-      font-size: 2rem; } }
+@media screen and (min-width: 64em) {
+  .Header-container {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 4rem;
+    grid-template-areas: 'logo panel'; }
+  .Logo {
+    justify-content: start; }
+  .Panel {
+    position: static;
+    overflow-y: visible;
+    transform: translate(0, 0);
+    background-color: transparent; }
+    .Panel-button {
+      display: none; }
+  .Menu {
+    margin-top: 0; }
+    .Menu-listItem {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center; }
+    .Menu-link:hover {
+      border-top: medium solid #FFF;
+      background-color: transparent; } }

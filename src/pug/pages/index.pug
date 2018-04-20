@@ -1,11 +1,13 @@
 extends ../includes/layout.pug
-include ../includes/components/youtube_video.pug
+include ../includes/components/header_video.pug
+include ../includes/components/navigation_off_canvas.pug
+
 block metatags
-  -var title = 'kEnAi NPM Starter Kit'
-  -var description = 'Kit de inicio para desarrollo frontend basado en componentes (Pug, Sass y JS)  y automatizado con Scripts NPM desarrollado por @jonmircha'
+  -var title = 'Peugeot'
+  -var description = 'kikisvv@hotmail.com'
   title= title
   meta(name="description", content=description)
   meta(name="application-name", content=title)
 block content
   main.App
-   h1  Hola mundo ._.)/ 
+  +headerVideo('Orchestra', 'Peugeot', 'MOTION & EMOTION')
