@@ -22,7 +22,7 @@ export default function youtubeVideo () {
 
   youtube.forEach((video, index) => youtubeIds[index] = video.id)
 
-  console.log( youtubeIds )
+  //console.log( youtubeIds )
 
   function showVideo (mq) {
     if (mq.matches) {

@@ -1,0 +1,17 @@
+.Sentence{
+    olor: #FFF;
+    text-align: center;
+    font: {
+        size: 4vw;
+        family: 'Permanent Marker', sans-serif;
+    }
+
+    cite{font-size: 3vw;}
+}
+
+@media screen and (min-width: 64em){
+    .Sentence{
+        font-size: 3vw;
+        cite{ font-size: 2vw;}
+    }
+}

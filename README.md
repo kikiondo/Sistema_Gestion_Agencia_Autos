@@ -10,7 +10,11 @@ El sistema de gestón para agencias de autos necesita gestionar actividades proc
 Facilitar el control y seguimiento de sus operaciones para incrementar la venta de vehículos.
 
 Planeación:
+
 Análisis y diseño:
+
 Desarrollo:
+
 Control de calidad:
+
 Implementación:

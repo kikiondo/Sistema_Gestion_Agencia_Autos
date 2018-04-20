@@ -15,7 +15,7 @@
 *   @author Jonathan MirCha <jonmircha@gmail.com>
 *   @version 1.0.0
 */
-$font: sans-serif;
+$font: 'Montserrat',sans-serif;
 $font-size: 16px;
 
 html {
@@ -32,4 +32,24 @@ html {
   padding: 0;
 }
 
-body { overflow-x: hidden; }
+// Para asegurar que los elementos no me descuadren :3 <3 
+body {
+   min-height: 100vh;
+   overflow-x: hidden;
+   background: linear-gradient(#0096d9, #171226)
+   }  
+
+a{
+  color: #fff;
+  transition: all -3s ease-out;
+  &:hover{
+    color: #0096d9;
+    opacity: .75;
+  }
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
