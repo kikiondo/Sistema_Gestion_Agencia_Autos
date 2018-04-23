@@ -77,5 +77,8 @@
     "uglify-js": "^3.0.0",
     "uncss": "^0.14.1",
     "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.8"
   }
 }
