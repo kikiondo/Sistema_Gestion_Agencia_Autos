@@ -1,5 +1,6 @@
 extends ../includes/layout.pug
 include ../includes/components/header_video.pug
+include ../includes/components/header_poster.pug
 include ../includes/components/navigation_off_canvas.pug
 
 block metatags
@@ -11,10 +12,18 @@ block metatags
 block content
   main.App
   +headerVideo('Orchestra', 'Peugeot', 'MOTION & EMOTION')
+  +headerPoster('./img/Servicios.png', 'SERVICIOS Y MANTENIMIENTO', '')
   section.Promociones
-    .Promociones-Contenedor
-      div.Promociones-Titulos
-        p.Promociones-Titulo soy un titulo
-        p.Promociones-SubTitulo Soy un sub titulo
-      .Promociones-Imagen
-        img(src="#" alt="nada")
+    .Promociones-Titulos
+      p.Promociones-Titulo OFERTAS Y PROMOCIONES DEL MES
+      p.Promociones-SubTitulo DIAS IMPERDIBLES PEUGEOT
+    .Promociones-Imagen
+      img.ImagenPromocion(src="./img/promocion.png" alt="Imagen de promoción")
+  section.Opciones
+    .Opciones-Titulos
+      p.Opciones-Titulo ¿QUÉ DESEAS HACER?
+    .Opciones-Galleria
+      img(src="./img/tablet.jpg", alt="Tablet")
+      img(src="./img/Libro.png", alt="Libro")
+      img(src="./img/cel.png", alt="Celular")
+  footer.footer 
