@@ -1,0 +1,36 @@
+
+.Promociones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  max-width: 100vw;
+}
+
+.Promociones-Contenedor{
+  width: 100vw;
+  height: 50vh;
+  background: white;
+  display: grid;
+  grid-template-rows: span(3, 1fr);
+  grid-gap: 1em;
+  justify-items: strech;
+  align-items: strech;
+  border: .5em solid silver;
+}
+
+
+.Promociones-Titulo{
+  display: grid;
+  justify-content: center;
+}
+
+.Promociones-SubTitulo{
+  display: grid;
+  justify-content: center;
+}
+
+.Promociones-Imagen{
+  display: grid;
+  justify-content: center;
+}
