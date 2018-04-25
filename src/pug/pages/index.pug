@@ -12,18 +12,21 @@ block metatags
 block content
   main.App
   +headerVideo('Orchestra', 'Peugeot', 'MOTION & EMOTION')
-  +headerPoster('./img/Servicios.png', 'SERVICIOS Y MANTENIMIENTO', '')
   section.Promociones
     .Promociones-Titulos
-      p.Promociones-Titulo OFERTAS Y PROMOCIONES DEL MES
+      p.Promociones-Titulo ¡OFERTAS Y PROMOCIONES DEL MES!
       p.Promociones-SubTitulo DIAS IMPERDIBLES PEUGEOT
     .Promociones-Imagen
       img.ImagenPromocion(src="./img/promocion.png" alt="Imagen de promoción")
+  +headerPoster('./img/Servicios.png', 'SERVICIOS Y MANTENIMIENTO', '')
   section.Opciones
     .Opciones-Titulos
       p.Opciones-Titulo ¿QUÉ DESEAS HACER?
     .Opciones-Galleria
-      img(src="./img/tablet.jpg", alt="Tablet")
-      img(src="./img/Libro.png", alt="Libro")
-      img(src="./img/cel.png", alt="Celular")
+      img.Galleria-Imagene-1(src="./img/tablet.jpg", alt="Tablet")
+      p.Galleria-Descripcion Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis totam iure deserunt. Beatae, consequuntur quaerat saepe fugit sint porro dignissimos vel molestias debitis tenetur, officiis quas amet sit repellat at.
+      img.Galleria-Imagene(src="./img/Libro.png", alt="Libro")
+      p.Galleria-Descripcion Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eius magni, aspernatur quo omnis cum. Assumenda suscipit aperiam impedit doloremque facere corporis nam reprehenderit repellendus, dicta nemo eligendi perferendis consequuntur?
+      img.Galleria-Imagene(src="./img/cel.png", alt="Celular")
+      p.Galleria-Descripcion Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi placeat saepe necessitatibus eaque ullam, consequatur libero corrupti neque nam architecto iusto consectetur alias perspiciatis deserunt aliquid nemo ut voluptatibus reiciendis!
   footer.footer 
